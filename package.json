@@ -1,0 +1,17 @@
+{
+  "name": "dimacs",
+  "version": "0.0.1",
+  "author": "Sven Hueser, Michael Hanus <mh@informatik.uni-kiel.de>",
+  "maintainer": "Michael Hanus <mh@informatik.uni-kiel.de>",
+  "synopsis": "An interface to SAT solvers supporting DIMACS.",
+  "category": [ "Constraints", "Verification" ],
+  "license": "BSD-3-Clause",
+  "licenseFile": "LICENSE",
+  "dependencies": {
+  },
+  "exportedModules": [ "Dimacs.Types", "Dimacs.Build", "Dimacs.Solver" ],
+  "source": {
+     "git": "https://git.ps.informatik.uni-kiel.de/curry-packages/dimacs.git",
+     "tag": "$version"
+  }
+}
