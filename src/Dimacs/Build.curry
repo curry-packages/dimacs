@@ -8,7 +8,7 @@
 
 module Dimacs.Build where
 
-import List (nub)
+import Data.List (nub)
 
 import Dimacs.Types
 

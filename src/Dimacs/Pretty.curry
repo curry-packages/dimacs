@@ -8,7 +8,7 @@
 module Dimacs.Pretty ( showDimacs, prettyDimacs, prettySolution )
  where
 
-import Pretty
+import Text.Pretty
 
 import Dimacs.Types
 import Dimacs.Build

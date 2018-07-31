@@ -7,6 +7,8 @@
 
 module Dimacs.Parser where
 
+import Prelude hiding ((<$>))
+
 import DetParser
 import Dimacs.Types
 import Dimacs.Scanner

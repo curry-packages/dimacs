@@ -9,7 +9,7 @@
 
 module Dimacs.Solver where
 
-import IO
+import System.IO
 import IOExts
 
 import Dimacs.Parser ( parse )

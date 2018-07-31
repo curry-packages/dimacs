@@ -7,8 +7,8 @@
 
 module Dimacs.Scanner where
 
-import ReadNumeric
-import Char (isAlpha, isDigit, toLower)
+import Numeric
+import Data.Char (isAlpha, isDigit, toLower)
 
 data Token
   -- keywords
@@ -19,6 +19,7 @@ data Token
   | VarNot
   -- other
   | EOF
+  deriving (Eq, Show)
 
 keywords :: [(String, Token)]
 keywords =
@@ -54,7 +55,6 @@ scanKeyword cs =
 
 scanNum :: String -> [Token]
 scanNum cs =
-  let v = readInt cs
-  in case v of
-    Just (num, rest)  -> VarNum num : scan rest
-    Nothing           -> error "should not be possible"
+  case readInt cs of
+    [(num, rest)]  -> VarNum num : scan rest
+    _              -> error "should not be possible"
