@@ -2,10 +2,12 @@
 --- This module defines a simple parser for the output of a DIMACS solver.
 ---
 --- @author Sven Hueser
---- @version September 2017
+--- @version July 2021
 ------------------------------------------------------------------------------
 
 module Dimacs.Parser where
+
+import Prelude hiding ( some, (<*), (*>), (<$>) )
 
 import DetParser
 import Dimacs.Types

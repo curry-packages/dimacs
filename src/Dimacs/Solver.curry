@@ -4,13 +4,13 @@
 --- It also defines configuration for various solvers.
 ---
 --- @author  Michael Hanus
---- @version September 2017
+--- @version July 2021
 ------------------------------------------------------------------------------
 
 module Dimacs.Solver where
 
-import IO
-import IOExts
+import System.IO
+import System.IOExts ( execCmd )
 
 import Dimacs.Parser ( parse )
 import Dimacs.Pretty ( showDimacs )

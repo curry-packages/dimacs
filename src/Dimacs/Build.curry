@@ -3,12 +3,12 @@
 --- of Boolean formulas.
 ---
 --- @author Sven Hueser
---- @version September 2017
+--- @version July 2021
 ------------------------------------------------------------------------------
 
 module Dimacs.Build where
 
-import List (nub)
+import Data.List (nub)
 
 import Dimacs.Types
 

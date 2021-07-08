@@ -2,13 +2,13 @@
 --- This module defines operations to show Boolean formulas in DIMACS format.
 ---
 --- @author  Michael Hanus, Sven Hueser
---- @version September 2017
+--- @version July 2021
 ------------------------------------------------------------------------------
 
 module Dimacs.Pretty ( showDimacs, prettyDimacs, prettySolution )
  where
 
-import Pretty
+import Text.Pretty
 
 import Dimacs.Types
 import Dimacs.Build

@@ -3,12 +3,12 @@
 --- together with some auxiliary operations.
 ---
 --- @author  Michael Hanus, Sven Hueser
---- @version September 2017
+--- @version July 2021
 ------------------------------------------------------------------------------
 
 module Dimacs.Types where
 
-import List ( maximum )
+import Data.List ( maximum )
 
 --- The type of Boolean formulas.
 --- Not that variables should be numbered from 1.
@@ -16,6 +16,7 @@ data Boolean = Var Int
              | Not Boolean
              | And [Boolean]
              | Or  [Boolean]
+ deriving (Eq,Show)
 
 --- Returns the maximal variable index in a Boolean formula.
 maxVar :: Boolean -> Int

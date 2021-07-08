@@ -2,13 +2,13 @@
 --- This module defines a simple scanner for the output of a DIMACS solver.
 ---
 --- @author Sven Hueser
---- @version September 2017
+--- @version July 2021
 ------------------------------------------------------------------------------
 
 module Dimacs.Scanner where
 
-import ReadNumeric
-import Char (isAlpha, isDigit, toLower)
+import Data.Char (isAlpha, isDigit, toLower)
+import Numeric
 
 data Token
   -- keywords
@@ -19,6 +19,7 @@ data Token
   | VarNot
   -- other
   | EOF
+ deriving (Eq, Show)
 
 keywords :: [(String, Token)]
 keywords =
@@ -56,5 +57,5 @@ scanNum :: String -> [Token]
 scanNum cs =
   let v = readInt cs
   in case v of
-    Just (num, rest)  -> VarNum num : scan rest
-    Nothing           -> error "should not be possible"
+       [(num, rest)] -> VarNum num : scan rest
+       _             -> error "should not be possible"
