@@ -18,7 +18,7 @@
         "modules": [ "Simple" ]
     },
     "source": {
-        "git": "https://git.ps.informatik.uni-kiel.de/curry-packages/dimacs.git",
+        "git": "https://github.com/curry-packages/dimacs.git",
         "tag": "$version"
     }
 }
